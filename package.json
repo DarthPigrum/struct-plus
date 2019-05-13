@@ -1,0 +1,23 @@
+{
+  "name": "struct-plus",
+  "version": "0.0.1",
+  "description": "NodeJS module to work with buffers as with structures",
+  "main": "struct.js",
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarthPigrum/struct-plus.git"
+  },
+  "keywords": [
+    "struct",
+    "buffer"
+  ],
+  "author": "Mike Zhukov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DarthPigrum/struct-plus/issues"
+  },
+  "homepage": "https://github.com/DarthPigrum/struct-plus#readme"
+}
