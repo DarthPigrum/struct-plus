@@ -3,7 +3,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4e005af4c2854774a96a9f35e75c0d6b)](https://www.codacy.com/app/DarthPigrum/struct-plus?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DarthPigrum/struct-plus&amp;utm_campaign=Badge_Grade)
 [![npm version](https://badge.fury.io/js/struct-plus.svg)](https://badge.fury.io/js/struct-plus)
 #### Usage
-###### Declaration
+##### Declaration
 To describe the structure you should use this syntax:
 ```javascript
 const { struct } = require('struct-plus');
@@ -19,7 +19,7 @@ const types = require('struct-plus/types');
 const substruct = struct([types.int8, 'first'], [types.uint16, 'second'], [types.int48, 'array', 10]);
 const description = struct([types.char(16), 'name'], [substruct, 'info']);
 ```
-###### Assigning
+##### Assigning
 Then you can use this description to allocate Buffer:
 ```javascript
 const { Struct } = require('struct-plus');
