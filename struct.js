@@ -2,9 +2,8 @@
 function struct(...components) {
   const result = { index: {}, size: 0 };
   for (const component of components) {
-    const type = component[0];
-    const name = component[1];
-    if (component[2]) {
+    const [type, name, third]= component;
+    if (third) {
       const arr = [];
       for (let i = 0; i < component[2]; i++) arr.push([type, i]);
       const array = struct(...arr);
