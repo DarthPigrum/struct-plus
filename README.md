@@ -9,9 +9,9 @@ To describe the structure you should use this syntax:
 const { struct } = require('struct-plus');
 const description = struct([type0, name0, arraySize0(optional)], [type1, name1, arraySize1(optional)],...);
 ```
-Where type may be:
-1.Scalar(int,float,double,char(n))
-2.Another structure description
+Where type may be:  
+1.Scalar(int,float,double,char(n))  
+2.Another structure description  
 You can use built-in scalar types:
 ```javascript
 const { struct } = require('struct-plus');
