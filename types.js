@@ -2,6 +2,11 @@
 function type(size, read, write) {
   return { size, read, write };
 }
+
+// const template1 = (buf, offset, fn, number) => buf[fn](offset, number);
+// const template2 = (buf, offset, value, fn, number) =>
+//   buf[fn](value, offset, number);
+
 const int8 = type(1,
   (buf, offset) => buf.readInt8(offset),
   (buf, offset, value) => buf.writeInt8(value, offset));
