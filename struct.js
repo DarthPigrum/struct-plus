@@ -5,7 +5,7 @@ function struct(...components) {
     const [type, name, third] = component;
     if (third) {
       const arr = [];
-      for (let i = 0; i < component[2]; i++) arr.push([type, i]);
+      for (let i = 0; i < third; i++) arr.push([type, i]);
       const array = struct(...arr);
       result.index[name] = Object.assign({}, array, { offset: result.size });
       result.size += array.size;
