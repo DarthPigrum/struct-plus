@@ -1,6 +1,6 @@
 {
   "name": "struct-plus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NodeJS module to work with buffers as with structures",
   "main": "struct.js",
   "scripts": {
