@@ -2,6 +2,9 @@
 function type(size, read, write) {
   return { size, read, write };
 }
+const numtype = (name, size) => type(size,
+  (buf, offset) => buf[`read${name}`](offset, size),
+  (buf, offset, value) => buf[`write${name}`](value, offset, size));
 const int8 = type(1,
   (buf, offset) => buf.readInt8(offset),
   (buf, offset, value) => buf.writeInt8(value, offset));
@@ -48,4 +51,4 @@ const char = (size, encoding = 'utf8') => type(size,
   });
 module.exports = { int8, int16, int32, int48, int64,
   uint8, uint16, uint32, uint48, uint64,
-  float, double, char, type };
+  float, double, char, type, numtype };
