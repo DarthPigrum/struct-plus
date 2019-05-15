@@ -114,10 +114,16 @@ const testChar = type => {
       'string read/write failed');
   }
 };
-testIntTypes([types.int8, types.int16, types.int32, types.int48,
-  types.uint8, types.uint16, types.uint32, types.uint48]);
-testIntArrayTypes([types.int8, types.int16, types.int32, types.int48,
-  types.uint8, types.uint16, types.uint32, types.uint48]);
+testIntTypes([
+  types.int8, types.int16, types.int24,
+  types.int32, types.int40, types.int48,
+  types.uint8, types.uint16, types.uint24,
+  types.uint32, types.uint40, types.uint48]);
+testIntArrayTypes([
+  types.int8, types.int16, types.int24,
+  types.int32, types.int40, types.int48,
+  types.uint8, types.uint16, types.uint24,
+  types.uint32, types.uint40, types.uint48]);
 testFloatTypes([types.float, types.double]);
 testChar(types.char);
 console.log('passed');
