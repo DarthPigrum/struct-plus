@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 function struct(...components) {
   const result = { index: {}, size: 0 };
   for (const component of components) {
@@ -37,13 +37,13 @@ class Struct {
         Object.defineProperty(result, element, {
           enumerable: true,
           get: () => that._objectify(cell.index, cell.offset + offset),
-          set: (obj) => Object.assign(result[element], obj)
+          set: obj => Object.assign(result[element], obj)
         });
       } else {
         Object.defineProperty(result, element, {
           enumerable: true,
           get: () => cell.read(that.buffer, cell.offset + offset),
-          set: (value) => cell.write(that.buffer, cell.offset + offset, value)
+          set: value => cell.write(that.buffer, cell.offset + offset, value)
         });
       }
     }
