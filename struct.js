@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 function struct(...components) {
   const result = { index: {}, size: 0 };
   for (const component of components) {
