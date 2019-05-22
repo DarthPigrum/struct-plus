@@ -33,17 +33,19 @@ class Struct {
     const result = {};
     for (const element in index) {
       const cell = index[element];
-      Object.defineProperty(result, element, cell.index ?
-        {
+      if (cell.index) {
+        Object.defineProperty(result, element, {
           enumerable: true,
           get: () => that._objectify(cell.index, cell.offset + offset),
           set: (obj) => Object.assign(result[element], obj)
-        } :
-        {
+        });
+      } else {
+        Object.defineProperty(result, element, {
           enumerable: true,
           get: () => cell.read(that.buffer, cell.offset + offset),
           set: (value) => cell.write(that.buffer, cell.offset + offset, value)
         });
+      }
     }
     return result;
   }
